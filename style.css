@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Evita barra de rolagem horizontal */
+}
+.degrade-text {
+    font-size: 2rem; /* Ajuste o tamanho da fonte conforme necessário */
+    background: linear-gradient(to right, #C0C0C0, #0707ec); /* Degradê do cinza ao azul */
+    -webkit-background-clip: text; /* Para navegadores baseados em WebKit (Chrome, Safari) */
+    -webkit-text-fill-color: transparent; /* Torna o preenchimento do texto transparente */
+}
+
+
+/* Configuração do vídeo de fundo */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color:  #C0C0C0;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; 
+}
+
+header nav {
+    display: flex;
+}
+
+header nav a {
+    color: #b9b9e2;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: #F2F2F2;
+}
+
+section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2; 
+}
+
+main {
+    position: relative;
+    z-index: 2;
+    color: #b9b9e2;
+}
+
+/* Estilos adicionais para conteúdo */
+.home-content,
+#home {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #d9d9e9;
+}
+#home .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#home .profile-pic img {
+    width: 100%;
+    height: 100%;
+}
+
+#home h1 {
+    font-size: 2.5rem;
+}
+
+#home p {
+    color: #F2F2F2;
+}
+#sobre {
+    display: flex; /* Faz o layout ser flexível */
+    align-items: center; /* Centraliza verticalmente os itens */
+    padding: 20px; /* Adiciona espaçamento */
+}
+
+.about-img {
+    margin-right: 40px; /* Espaço entre a imagem e o texto */
+}
+
+.profile-pic {
+    width: 300px; /* Tamanho desejado da imagem */
+    height: 300px; /* Mantém a altura igual à largura para formar um círculo */
+    border-radius: 50%; /* Faz a imagem ficar redonda */
+    object-fit: cover; /* Cobre o espaço sem distorcer */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao redor da imagem */
+}
+
+#sobre .about-info {
+    flex: 1;
+    color: #F2F2F2;
+}
+
+#sobre h2 {
+    color: #d9d9e9;
+}
+
+#sobre ul {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+#sobre ul li {
+    margin: 10px 0;
+}
+
+#sobre button {
+    padding: 10px 20px;
+    background-color: rgba(63, 0, 180, 0.2);
+    color: #F2F2F2;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#sobre button:hover {
+    background-color: #0D0D0D;
+}
+#projetos {
+    padding: 50px;
+    text-align: center;
+    color: #d9d9e9;
+}
+
+.projetos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.projeto-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #F2F2F2;
+    width: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 15px;
+}
+
+.projeto-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.projeto-card h3 {
+    margin-top: 10px;
+    color: #d9d9e9;
+}
+
+.projeto-card p {
+    margin: 10px 0;
+}
+
+.projeto-card button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: rgba(63, 0, 180, 0.2);
+    color: #F2F2F2;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.projeto-card button:hover {
+    background-color: #F2F2F2;
+    color: #333;
+}
+#habilidade {
+    padding: 50px;
+    text-align: center;
+    color: #d9d9e9;
+}
+
+.icon-container {
+    display: grid;
+    gap: 30px; 
+    margin-top: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
+    justify-items: center;
+}
+
+.tech-icon {
+    width: 100%;
+    max-width: 150px; 
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.tech-icon:hover {
+    transform: scale(1.15); 
+}
+footer#contato {
+    padding: 30px;
+    text-align: center;
+    color: #b9b9e2;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #b9b9e2;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #F2F2F2;
+}
