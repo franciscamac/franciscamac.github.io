@@ -20,23 +20,23 @@
             <a href="#home">Home</a>
             <a href="#sobre">Sobre</a>
             <a href="#projetos">Projetos</a>
-            <a href="#habilidade">Habilidades</a>
+            <a href="#habilidade">Ferramentas</a>
             <a href="#contato">Contato</a>
         </nav>
     </header>
     <video autoplay muted loop playsinline id="background-video">
         <source src="video/video-teste-2.mp4" type="video/mp4">
-        Seu navegador não suporta o vídeo em HTML5.
     </video>
 
     <main>
+        <div class="icon-overlay"></div> 
         <section id="home">
             <div class="home-content">
                 <h3>Olá, meu nome é</h3>
                 <h1 class="degrade-text">Francisca Macário</h1>
-                <p>FullStack Developer</p>
+                <p class="degrade-text">FullStack Developer</p>
 
-                <button onclick="gerarCSV()">Baixar Informações</button>
+                <button onclick="window.location.href='docs/curriculo.pdf'">Baixar Curriculo</button>
 
             </div>
         </section>
@@ -44,42 +44,24 @@
 
         <section id="sobre">  
             <h2>Sobre</h2>
-
+        
             <div class="about-content">
                 <div class="about-img">
                     <img src="img/perfil.jpg" alt="Ilustração Profissional de Programação" class="profile-pic">
                 </div>
                 <div class="about-info">
-                    <p>Olá! Sou uma profissional apaixonada por tecnologia e por enfrentar desafios complexos.
-                        Estudante de Análise e Desenvolvimento de Sistemas,
-                        tenho trabalhado para encontrar soluções práticas e eficientes em projetos variados.</p>
+                    <p>Olá! Sou Francisca Macário, Fullstack Developer com uma paixão profunda por tecnologia e pela criação de soluções inovadoras e eficazes.
+                         Atualmente, atuo como Desenvolvedora na Defensoria Pública do Estado do Piauí, 
+                         onde tenho aprimorado sistemas utilizando frameworks como Spring Boot e JBoss Seam,
+                          modernizando processos seletivos e sistemas de RH. Fiz parte do programa DIO Campus Expert, 
+                          onde tive a oportunidade de fortalecer minhas habilidades técnicas e desenvolver conhecimentos específicos em áreas que mais me atraem,
+                          como Java, Spring Boot, API REST, SQL e Linux.
+                        Em paralelo, estou concluindo minha graduação em Análise e Desenvolvimento de Sistemas, o que complementa minha experiência prática e me prepara ainda mais para os desafios do setor tecnológico. Com uma mentalidade voltada para resultados e um gosto por desafios, busco sempre aprender e crescer profissionalmente, mantendo o foco em soluções que realmente fazem a diferença.</p>
                 </div>
             </div>
         </section>
-        
-        
-        <section id="habilidade">
-            <h2>Habilidades</h2>
-
-            <div class="icon-container">
-                <img src="img/spring.png" alt="Spring" class="tech-icon">
-                <img src="img/java.png" alt="Java" class="tech-icon">
-                <img src="img/j.png" alt="JBoss" class="tech-icon">
-                <img src="img/js.png" alt="JavaScript" class="tech-icon">
-                <img src="img/html.png" alt="HTML" class="tech-icon">
-                <img src="img/css.png" alt="CSS" class="tech-icon">
-                <img src="img/apache.png" alt="Tomcat" class="tech-icon">
-                <img src="img/junit.png" alt="JUnit" class="tech-icon">
-                <img src="img/git.png" alt="Git" class="tech-icon">
-                <img src="img/sql.png" alt="SQL" class="tech-icon">
-                <img src="img/linux.png" alt="Linux" class="tech-icon">
-
-            </div>
-        </section>
-
-
         <section id="projetos">
-            <h2>Meus Serviços</h2>
+            <h2>Projetos</h2>
 
             <div class="projetos-container">
 
@@ -108,9 +90,50 @@
                 </div>
             </div>
         </section>
-
-
-
+        
+        
+        <section id="habilidade">
+            <h2>Ferramentas</h2>
+            
+            <div class="icon-container">
+                <a href="https://docs.spring.io/spring-boot/index.html" target="_blank">
+                    <img src="img/spring.png" alt="Spring" class="tech-icon">
+                </a>
+                <a href="https://www.oracle.com/java/" target="_blank">
+                    <img src="img/java.png" alt="Java" class="tech-icon">
+                </a>
+                <a href="https://www.seamframework.org/" target="_blank">
+                    <img src="img/j.png" alt="JBoss" class="tech-icon">
+                </a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+                    <img src="img/js.png" alt="JavaScript" class="tech-icon">
+                </a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+                    <img src="img/html.png" alt="HTML" class="tech-icon">
+                </a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                    <img src="img/css.png" alt="CSS" class="tech-icon">
+                </a>
+                <a href="https://tomcat.apache.org/" target="_blank">
+                    <img src="img/apache.png" alt="Tomcat" class="tech-icon">
+                </a>
+                <a href="https://junit.org/junit5/" target="_blank">
+                    <img src="img/junit.png" alt="JUnit" class="tech-icon">
+                </a>
+                <a href="https://git-scm.com/" target="_blank">
+                    <img src="img/git.png" alt="Git" class="tech-icon">
+                </a>
+                <a href="https://www.mysql.com/" target="_blank">
+                    <img src="img/sql.png" alt="SQL" class="tech-icon">
+                </a>
+                <a href="https://www.linux.org/" target="_blank">
+                    <img src="img/linux.png" alt="Linux" class="tech-icon">
+                </a>
+                <a href="https://www.postgresql.org/docs/" target="_blank">
+                    <img src="img/postgres.png" alt="Postgres" class="tech-icon">
+                </a>
+            </div>
+        </section>
         
     </main>
     <footer id="contato">
