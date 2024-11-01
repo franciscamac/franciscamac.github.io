@@ -17,7 +17,32 @@ html {
     -webkit-background-clip: text; /* Para navegadores baseados em WebKit (Chrome, Safari) */
     -webkit-text-fill-color: transparent; /* Torna o preenchimento do texto transparente */
 }
+section h2 {
+    font-size: 2.5rem; /* Tamanho maior para maior destaque */
+    font-family: 'Roboto Mono', monospace;
+    color: #d9d9e9;
+    text-align: center;
+    padding-top: 20px; /* Distância do topo */
+    margin-bottom: 20px; /* Espaço entre o título e o conteúdo */
+    position: relative;
+}
+section h2::before,
+section h2::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 2px;
+    background-color: #00BFFF; /* Azul elétrico para a linha */
+}
 
+section h2::before {
+    left: 0;
+}
+
+section h2::after {
+    right: 0;
+}
 
 /* Configuração do vídeo de fundo */
 #background-video {
@@ -117,54 +142,54 @@ main {
     margin: 20px 0; /* Margem para espaçamento vertical */
     font-family: 'Roboto Mono', monospace;
 }
-#sobre {
-    display: flex; /* Faz o layout ser flexível */
-    align-items: center; /* Centraliza verticalmente os itens */
-    padding: 20px; /* Adiciona espaçamento */
-}
-
-.about-img {
-    margin-right: 40px; /* Espaço entre a imagem e o texto */
-}
-
-.profile-pic {
-    width: 300px; /* Tamanho desejado da imagem */
-    height: 300px; /* Mantém a altura igual à largura para formar um círculo */
-    border-radius: 50%; /* Faz a imagem ficar redonda */
-    object-fit: cover; /* Cobre o espaço sem distorcer */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao redor da imagem */
-}
-
-#sobre .about-info {
-    flex: 1;
-    color: #F2F2F2;
-}
-
-#sobre h2 {
-    color: #d9d9e9;
-}
-
-#sobre ul {
-    list-style: none;
-    margin: 1rem 0;
-}
-
-#sobre ul li {
-    margin: 10px 0;
-}
-
-#sobre button {
+#home button {
     padding: 10px 20px;
     background-color: rgba(63, 0, 180, 0.2);
     color: #F2F2F2;
     border: none;
     cursor: pointer;
     font-weight: bold;
+    margin-top: 20px; /* Adiciona espaço acima do botão */
 }
 
-#sobre button:hover {
+#home button:hover {
     background-color: #0D0D0D;
 }
+#sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.about-content {
+    display: flex;
+    align-items: center; /* Alinha a imagem e o texto no centro verticalmente */
+    justify-content: center;
+    gap: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.about-img {
+    
+    margin: 0; /* Remove qualquer margem inferior para alinhamento horizontal */
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-info {
+    max-width: 600px;
+    color: #F2F2F2;
+    text-align: left; /* Garante que o texto fique alinhado à esquerda */
+}
+
+
 #projetos {
     padding: 50px;
     text-align: center;
