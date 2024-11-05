@@ -22,9 +22,10 @@ section h2 {
     font-family: 'Roboto Mono', monospace;
     color: #1fece2;
     text-align: center;
-    padding-top: 20px; /* Distância do topo */
+    padding-top: 50px; /* Distância do topo */
     margin-bottom: 150px; /* Espaço entre o título e o conteúdo */
     position: relative;
+    flex-wrap: wrap;
 }
 section h2::before,
 section h2::after {
@@ -64,6 +65,7 @@ header {
     align-items: center;
     z-index: 1000; 
     font-family: 'Roboto Mono', monospace;
+    flex-wrap: wrap;
 }
 
 
@@ -194,6 +196,7 @@ main {
     padding: 50px;
     text-align: center;
     color: #d9d9e9;
+    flex-wrap: wrap;
 }
 
 .projetos-container {
@@ -251,6 +254,7 @@ main {
     text-align: center;
     color: #d9d9e9;
     position: relative; /* Define uma posição para a camada de sobreposição */
+    flex-wrap: wrap;
 }
 
 .icon-container {
