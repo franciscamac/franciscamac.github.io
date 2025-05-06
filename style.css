@@ -54,34 +54,166 @@ section h2::after {
     z-index: -1;
 }
 
+/* Estilo base do header */
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
     position: fixed;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     color:  #d9d9e9;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     z-index: 1000; 
     font-family: 'Roboto Mono', monospace;
     flex-wrap: wrap;
 }
 
-
+/* Estilo para alinhar os links do menu à direita */
 header nav {
     display: flex;
+    justify-content: flex-end; /* Alinha os links à direita */
+    gap: 20px; /* Espaçamento entre os links */
+    flex-grow: 1; /* Faz o menu ocupar o espaço restante */
 }
 
 header nav a {
-    color: #1fece2;
     text-decoration: none;
-    margin: 0 10px;
+    color: #d9d9e9; /* Cor original restaurada */
     font-weight: bold;
+    font-family: 'Roboto', sans-serif;
 }
 
 header nav a:hover {
-    color: #F2F2F2;
+    color: #4caf50; /* Cor ao passar o mouse */
+}
+
+nav a img {
+    margin-left: 8px;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+
+/* Estilo base do menu */
+.main-nav {
+    display: flex; /* Exibe os links na horizontal */
+    flex-direction: row; /* Garante que os links fiquem lado a lado */
+    gap: 20px; /* Espaçamento entre os links */
+}
+
+.main-nav ul {
+    list-style: none; /* Remove os marcadores da lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Exibe os itens na horizontal */
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+.main-nav a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #d9d9e9; /* Cor original dos links */
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Esconde o menu no mobile por padrão */
+@media (max-width: 768px) {
+    .main-nav {
+        display: none; /* Esconde o menu no mobile inicialmente */
+        flex-direction: column; /* Exibe os links na vertical no mobile */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #333; /* Fundo escuro no mobile */
+        padding: 1rem;
+        border-radius: 8px;
+        z-index: 1000;
+    }
+
+    .main-nav.active {
+        display: flex; /* Mostra o menu quando o botão sanduíche é clicado */
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Links na vertical no mobile */
+        gap: 10px;
+    }
+
+    .menu-toggle {
+        display: block; /* Exibe o botão sanduíche no mobile */
+    }
+
+    .language-toggle {
+        margin-top: 1rem;
+    }
+}
+
+/* Botão do menu sanduíche */
+.menu-toggle {
+    display: none; /* Esconde o botão no desktop */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #d9d9e9;
+    cursor: pointer;
+}
+
+/* Estilo do toggle switch */
+.language-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px; /* Adiciona uma margem entre o nav e a div */
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+lang-label {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
 }
 
 section {
@@ -296,20 +428,20 @@ footer#contato {
     color: #d9d9e9;
 }
 
-.social-icons {
+social-icons {
     display: flex;
     justify-content: center;
     gap: 30px;
     margin-top: 20px;
 }
 
-.social-icons a {
+social-icons a {
     color: #d9d9e9;
     font-size: 1.8rem;
     transition: color 0.3s ease;
 }
 
-.social-icons a:hover {
+social-icons a:hover {
     color: #F2F2F2;
 }
 

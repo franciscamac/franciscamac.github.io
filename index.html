@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Francisca Macário</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/css/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap">
@@ -14,14 +14,23 @@
 <body>
 
     <header>
-        <h2>Fran Macário</h2>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#habilidade">Ferramentas</a>
-            <a href="#contato">Contato</a>
+        <h2 data-lang-pt="Fran Macário" data-lang-en="Fran Macário">Fran Macário</h2>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#home" data-lang-pt="Home" data-lang-en="Home">Home</a></li>
+                <li><a href="#sobre" data-lang-pt="Sobre" data-lang-en="About">Sobre</a></li>
+                <li><a href="#projetos" data-lang-pt="Projetos" data-lang-en="Projects">Projetos</a></li>
+                <li><a href="#habilidade" data-lang-pt="Ferramentas" data-lang-en="Tools">Ferramentas</a></li>
+                <li><a href="#contato" data-lang-pt="Contato" data-lang-en="Contact">Contato</a></li>
+            </ul>
         </nav>
+        <div class="language-toggle">
+            <label class="switch">
+                <input type="checkbox" id="language-switch">
+                <span class="slider"></span>
+            </label>
+            <span class="lang-label" data-lang-pt="Português" data-lang-en="English">Português</span>
+        </div>
     </header>
     <video autoplay muted loop playsinline id="background-video">
         <source src="video/video-teste-2.mp4" type="video/mp4">
@@ -31,67 +40,69 @@
         <div class="icon-overlay"></div> 
         <section id="home">
             <div class="home-content">
-                <h3>Olá, meu nome é</h3>
+                <h3 data-lang-pt="Olá, meu nome é" data-lang-en="Hello, my name is">Olá, meu nome é</h3>
                 <h1 class="degrade-text">Francisca Macário</h1>
-                <p class="degrade-text">Backend Developer</p>
-
-                <button onclick="window.location.href='docs/curriculo.pdf'">Baixar Curriculo</button>
-
+                <p class="degrade-text" data-lang-pt="Desenvolvedora Fullstack" data-lang-en="Fullstack Developer">Desenvolvedora Fullstack</p>
+                <button data-lang-pt="Baixar Currículo" data-lang-en="Download Resume">Baixar Currículo</button>
             </div>
         </section>
 
 
         <section id="sobre">  
-            <h2>Sobre</h2>
-        
+            <h2 data-lang-pt="Sobre" data-lang-en="About">Sobre</h2>
             <div class="about-content">
                 <div class="about-img">
                     <img src="img/perfil.jpg" alt="Ilustração Profissional de Programação" class="profile-pic">
                 </div>
                 <div class="about-info">
-                    <p>Olá! Sou Francisca Macário, uma profissional Backend Developer com uma paixão profunda por tecnologia e pela criação de soluções inovadoras e eficazes.
-                         Atualmente, atuo como Desenvolvedora na Defensoria Pública do Estado do Piauí, 
-                         onde tenho aprimorado sistemas utilizando versões do java a partir do 8 e frameworks como Spring Boot e JBoss Seam,
-                          modernizando sistema de processos seletivos. Em paralelo, estou concluindo minha graduação em Engenharia de Software, o que complementa minha experiência prática e
-                        me prepara ainda mais para os desafios do setor tecnológico. Com uma mentalidade voltada para resultados e um gosto por desafios, 
-                        busco sempre aprender e crescer profissionalmente, mantendo o foco em soluções que realmente fazem a diferença.</p>
+                    <p data-lang-pt="Olá! Sou Francisca Macário, uma profissional Fullstack Developer com uma paixão profunda por tecnologia e pela criação de soluções inovadoras e eficazes. Atualmente, atuo como Desenvolvedora na Defensoria Pública do Estado do Piauí, onde tenho aprimorado sistemas utilizando versões do java a partir do 8 e frameworks como Spring Boot e JBoss Seam, modernizando sistema de processos seletivos. Em paralelo, estou concluindo minha graduação em Engenharia de Software, o que complementa minha experiência prática e me prepara ainda mais para os desafios do setor tecnológico. Com uma mentalidade voltada para resultados e um gosto por desafios, busco sempre aprender e crescer profissionalmente, mantendo o foco em soluções que realmente fazem a diferença."
+                       data-lang-en="Hello! I am Francisca Macário, a Fullstack Developer with a deep passion for technology and creating innovative and effective solutions. Currently, I work as a Developer at the Public Defender's Office of the State of Piauí, where I have been improving systems using Java versions from 8 onwards and frameworks like Spring Boot and JBoss Seam, modernizing selective process systems. At the same time, I am completing my degree in Software Engineering, which complements my practical experience and further prepares me for the challenges of the tech industry. With a results-oriented mindset and a taste for challenges, I am always eager to learn and grow professionally, focusing on solutions that truly make a difference.">
+                        Olá! Sou Francisca Macário, uma profissional Fullstack Developer com uma paixão profunda por tecnologia e pela criação de soluções inovadoras e eficazes. Atualmente, atuo como Desenvolvedora na Defensoria Pública do Estado do Piauí, onde tenho aprimorado sistemas utilizando versões do java a partir do 8 e frameworks como Spring Boot e JBoss Seam, modernizando sistema de processos seletivos. Em paralelo, estou concluindo minha graduação em Engenharia de Software, o que complementa minha experiência prática e me prepara ainda mais para os desafios do setor tecnológico. Com uma mentalidade voltada para resultados e um gosto por desafios, busco sempre aprender e crescer profissionalmente, mantendo o foco em soluções que realmente fazem a diferença.
+                    </p>
                 </div>
             </div>
         </section>
+
         <section id="projetos">
-            <h2>Projetos</h2>
-
+            <h2 data-lang-pt="Projetos" data-lang-en="Projects">Projetos</h2>
             <div class="projetos-container">
-
                 <div class="projeto-card">
                     <img src="img/petshop.png" alt="Imagem do Primeiro projeto">
-                    <h3>Petshop</h3>
-                    <p>Sistema de gerenciamento de Petshop com Java 17 e spring MVC</p>
-                    <button
-                        onclick="window.location.href='https://github.com/franciscamac/petshop-teste-pratico.git'">Ver Projeto</button>
+                    <h3 data-lang-pt="Petshop" data-lang-en="Petshop">Petshop</h3>
+                    <p data-lang-pt="Sistema de gerenciamento de Petshop com Java 17 e spring MVC"
+                       data-lang-en="Petshop management system with Java 17 and Spring MVC">
+                        Sistema de gerenciamento de Petshop com Java 17 e spring MVC
+                    </p>
+                    <button data-lang-pt="Ver Projeto" data-lang-en="View Project"
+                            onclick="window.location.href='https://github.com/franciscamac/petshop-teste-pratico.git'">
+                        Ver Projeto
+                    </button>
                 </div>
-
 
                 <div class="projeto-card">
                     <img src="img/turismo.png" alt="Imagem do segundo projeto">
-                    <h3>Site de Turismo</h3>
-                    <p>Site Fran Turismo</p>
-                    <button onclick="window.location.href='https://github.com/franciscamac/Turismo-projeto.git'">Ver Projeto</button>
+                    <h3 data-lang-pt="Site de Turismo" data-lang-en="Tourism Website">Site de Turismo</h3>
+                    <p data-lang-pt="Site Fran Turismo" data-lang-en="Fran Tourism Website">Site Fran Turismo</p>
+                    <button data-lang-pt="Ver Projeto" data-lang-en="View Project"
+                            onclick="window.location.href='https://github.com/franciscamac/Turismo-projeto.git'">
+                        Ver Projeto
+                    </button>
                 </div>
-
 
                 <div class="projeto-card">
                     <img src="img/crud.jpg" alt="Imagem do terceiro projeto">
-                    <h3>Sistema CRUD</h3>
-                    <p>Sistema CRUD com PHP</p>
-                    <button onclick="window.location.href='https://github.com/franciscamac/usuario-CRUD.git'">Ver Projeto</button>
+                    <h3 data-lang-pt="Sistema CRUD" data-lang-en="CRUD System">Sistema CRUD</h3>
+                    <p data-lang-pt="Sistema CRUD com PHP" data-lang-en="CRUD System with PHP">Sistema CRUD com PHP</p>
+                    <button data-lang-pt="Ver Projeto" data-lang-en="View Project"
+                            onclick="window.location.href='https://github.com/franciscamac/usuario-CRUD.git'">
+                        Ver Projeto
+                    </button>
                 </div>
             </div>
         </section>
                
         <section id="habilidade">
-            <h2>Ferramentas</h2>
-            
+            <h2 data-lang-pt="Ferramentas" data-lang-en="Tools">Ferramentas</h2>
             <div class="icon-container">
                 <a href="https://docs.spring.io/spring-boot/index.html" target="_blank">
                     <img src="img/spring.png" alt="Spring" class="tech-icon">
@@ -134,7 +145,7 @@
         
     </main>
     <footer id="contato">
-        <h2>Contato</h2>
+        <h2 data-lang-pt="Contato" data-lang-en="Contact">Contato</h2>
 
         <div class="social-icons">
             <a href="http://www.linkedin.com/in/francisca-mac%C3%A1rio-35b6a8190" target="_blank" title="LinkedIn">
@@ -148,7 +159,10 @@
             </a>
         </div>
 
-        <p>&copy; 2025 Francisca Macário. Todos os direitos reservados.</p>
+        <p data-lang-pt="&copy; 2025 Francisca Macário. Todos os direitos reservados."
+           data-lang-en="&copy; 2025 Francisca Macário. All rights reserved.">
+            &copy; 2025 Francisca Macário. Todos os direitos reservados.
+        </p>
     </footer>
     <script src="script.js"></script>
 </body>
