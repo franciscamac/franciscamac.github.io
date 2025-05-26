@@ -85,7 +85,7 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #4caf50; /* Cor ao passar o mouse */
+    color: #1fece2; /* Cor igual aos títulos das sections */
 }
 
 nav a img {
@@ -443,5 +443,15 @@ social-icons a {
 
 social-icons a:hover {
     color: #F2F2F2;
+}
+
+.social-icons a i {
+    color: #fff;
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover i {
+    color: #00bfff; /* Azul claro ao passar o mouse, opcional */
 }
 
